@@ -19,7 +19,6 @@ import kotlinx.android.synthetic.main.fragment_dashboard.view.*
 
 class dashboard : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,9 +38,6 @@ class dashboard : Fragment() {
         id = bundle!!.getString("id2")
 
         text.setText(id.toString())
-
-//        Toast.makeText(context, id.toString(), Toast.LENGTH_SHORT).show()
-
 
         timeTable.setOnClickListener {
            val intent = Intent(context,time_table::class.java)

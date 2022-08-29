@@ -37,7 +37,6 @@ class admin_layout : AppCompatActivity() {
         var edt_mobile = findViewById<EditText>(R.id.edt_mobile)
         var edt_email = findViewById<EditText>(R.id.edt_email)
 
-
         db = DBHelper(this)
 
         refershData()
@@ -52,9 +51,8 @@ class admin_layout : AppCompatActivity() {
                 edt_dob.text.toString(),
                 edt_mobile.text.toString(),
                 edt_email.text.toString()
-
-
             )
+
             db.addPerson(person)
             refershData()
             edt_id.setText("")
@@ -114,7 +112,6 @@ class admin_layout : AppCompatActivity() {
 
     }
 
-//    ,m_name:String,l_name:String,gender:String,dob:String,mobile:String
     private fun refershData() {
         lstPersons = db.allPeron
         val adapter = ListPersonAdapter(this@admin_layout, lstPersons, edt_id, edt_name,edt_m_name,edt_l_name,edt_gender,edt_dob,edt_mobile,edt_email)
